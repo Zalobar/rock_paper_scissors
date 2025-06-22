@@ -7,17 +7,18 @@ ties = 0
 
 # main game loop
 while True:
-    print(f"{wins}, {losses}, {ties}")
+    print(f"Wins: {wins}, Losses: {losses}, Ties: {ties}")
 
     # player input loop
     while True:
         print("Enter your move: (r)ock, (p)aper, (s)cissors or (q)uit")
-        player_move = print(input("> "))
+        player_move = input("> ")
         if player_move == "q":
             sys.exit()
-        if player_move == "r" or player_move == "p" or player_move == "s":
+        elif player_move == "r" or player_move == "p" or player_move == "s":
             break
-        print("You must type r, p, s, or q.")
+        else:
+            print("You must type r, p, s, or q.")
 
     # game loop
     
